@@ -1,5 +1,7 @@
 import mlx.core as np
 import pandas as pd
+from pathlib import Path
+from grayscale_converter import image_to_vector
 
 def linear_function(w, x, b):
     '''
@@ -132,4 +134,15 @@ for i in range(len(X_test)):
     if nn.forward(X_test[i])[1] == Y_test[i]:
         a += 1
 
-print(a / len(X_test) * 100)
+print(a / len(X_test) * 100) # ~ 95%
+
+
+
+'''
+Template for testing your own 28 * 28 pixel with the network
+'''
+path = Path('your path')
+test = image_to_vector(path) # Set invert arg to True if picture has white background.
+
+# test
+nn.forward(np.array(t))[1]
