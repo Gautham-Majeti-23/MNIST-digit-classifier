@@ -1,4 +1,4 @@
-import numpy as onp  # real NumPy for the image work (your `np` is MLX)
+import numpy as onp
 from PIL import Image
 from pathlib import Path
 
