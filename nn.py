@@ -25,9 +25,8 @@ def activation_gradient(a):
     return (a > 0).astype(np.float32)
 
 def softmax(a):
-    d = np.array([np.e ** -i for i in a])
-    return a / d
-
+    e = np.exp(a - np.max(a))
+    return e / np.sum(e)
 
 class Network:
     def __init__(self, layer_counts):
