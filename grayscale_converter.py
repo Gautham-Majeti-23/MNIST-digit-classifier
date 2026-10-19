@@ -1,6 +1,5 @@
 import numpy as onp
 from PIL import Image
-from pathlib import Path
 
 def image_to_vector(path, invert=None, threshold=0.2, preview=False):
     '''
