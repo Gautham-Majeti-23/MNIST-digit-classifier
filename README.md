@@ -5,7 +5,7 @@ A handwritten-digit classifier built with only NumPy. The forward pass, backprop
 ## Results
 
 - **Architecture:** 784 → 128 → 64 → 10
-- **Test accuracy:** **[XX.X]%** on the 10,000 MNIST test images
+- **Test accuracy:** **[96.01]%** on the 10,000 MNIST test images
 - **Training:** [1] epoch of per-sample SGD on 60,000 images, learning rate 0.01
 
 ## How it works
@@ -37,4 +37,6 @@ Download `mnist_train.csv` and `mnist_test.csv` from [(https://www.kaggle.com/da
 
 ## Next steps
 
-Mini-batch training, multiple epochs with shuffling, saving weights, and a small character-level transformer built from scratch.
+- Mini-batch training, multiple epochs with shuffling, saving weights.
+- Implement reinforcement learning and train this model to play simple games.
+- Small character-level transformer built from scratch.
