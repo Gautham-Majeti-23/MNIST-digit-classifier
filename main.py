@@ -30,8 +30,8 @@ for i in range(len(X_test)):
         a += 1
 print(a / len(X_test) * 100)
 
-path = Path('pixil-frame-0.png')
-t = image_to_vector(path) / 255
+path = Path('enter your file path')
+t = image_to_vector(path) / 255 # Set argument invert=True if white background with black text.
 output = nn.forward(np.array(t))
 
 print(np.array(softmax(output[0][-1])) * 100, int(output[1]))
