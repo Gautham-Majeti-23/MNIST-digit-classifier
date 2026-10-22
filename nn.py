@@ -58,6 +58,12 @@ class Network:
         '''
         Training the model.
         '''
+        if type(labels[0]) == np.int64 and self.layer_counts[-1] > 1:
+            Y_train = []
+            for i, a in enumerate(labels):
+                Y_train.append(np.array([1 if j == a else 0 for j in range(self.layer_counts[-1])], dtype=np.float32))
+            labels = Y_train
+
         for i, a in enumerate(data):
             predictions = self.forward(a)
             otpt = softmax(predictions[0][-1])
